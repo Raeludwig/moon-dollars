@@ -1,78 +1,56 @@
-# FullStack Boilerplate <!-- omit in toc -->
+<h1 align="center">
+  <br>
+Moon Dollars
+  <br>
+</h1>
 
-This boilerplate may be used as a starting point for building a full-stack app with Handlebars, Express, and Sequelize/MySQL. This boilerplate if configured for easy deployment on Heroku with JawsDB MySQL add-on.
+<h4 align="center"> Moon Dollars Coffee Shop website. An application to order coffee from your favorite local coffee shop, Moon Dollars! Login to order a brand new drink or from a list of your saved previous orders. If you aren't already, sign up to order now!</h4>
 
-- [Setup](#setup)
-- [Development](#development)
-- [Sessions](#sessions)
-- [Authentication](#authentication)
-- [Templates](#templates)
-- [Code Style](#code-style)
-- [Deploy to Heroku](#deploy-to-heroku)
 
-## Setup
+<p align="center">
+  <a href="#description">Description</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#license">License</a>•
+  <a href="#examples">Examples</a>
+</p>
 
-1. Run `npm i`.
-2. You will need an existing MySQL database. **mysql -> source db/schema.sql**
-3. Create `.env` file with MySQL credentials for local development and a SECRET. Refer to [.env.EXAMPLE](./.env.EXAMPLE)
-4. Run `npm start` to start the app.
 
-## Development
 
-This boilerplate includes [nodemon](https://nodemon.io/). Run `npm run watch` to start the server in watch mode during development.
 
-## Sessions
+## Description
 
-[express-session](https://www.npmjs.com/package/express-session) and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) are used for session management. Configure cookies and sessions in [config/session.js](./config/session.js)
+* This is an application that allows people to create and save their favorite drink orders from Moon Dollars.
 
-## Authentication
+## How To Use
 
-Passwords are hashed using [bcrypt](https://www.npmjs.com/package/bcrypt). Middleware for protected routes redirects to `/login`. This can be modified by updating [util/withAuth.js](./util/withAuth.js).
+To clone and run this application, you'll need VS installed on your computer. From your command line:
 
-## Templates
+```bash
+# Clone this repository
+$ git clone git@github.com:Raeludwig/coffee-saver.git
 
-[Handlebars.js](https://handlebarsjs.com/) and [express-handlebars](https://www.npmjs.com/package/express-handlebars) are used for rendering templates.
+# Install dependencies
+$ npm install
 
-You can add your own custom helper functions by exporting them from [util/helpers.js](./util/helpers.js).
+# Open mysql
+$ mysql -uroot
+mysql> source db/schema.sql
+mysql> exit 
 
-## Code Style
+# Run server
+$ node server.js
 
-[ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) are included for enforcing consistent code quality and format. The default configuration includes the ESLint recommended plugin, the Prettier plugin, plus a couple of additional rules. Modify [.eslintrc.js](./.eslintrc.json) to customize the rules.
+```
+Once you have reached the site, click sign up to become a new customer of Moon Dollars, or sign in to order the best tasting coffee around!
 
-## Deploy to Heroku
+> **Note**
+> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
-### Prerequisites
+## License
 
-Sign up for an [Heroku](https://id.heroku.com/login) account and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+MIT
 
-The app must be setup using Git for version control in order to deploy on Heroku
-following this guide. Be sure to initialize Git before proceeding if you did not
-initially create this project by using the template repo.
+---
+## Examples
+Video Walkthrough 
 
-### Create and Configure a Heroku App
-
-The code for this boilerplate is pre-configured to deploy to Heroku and connect to the JAWS DB add-on for MySQL. In order to deploy, you must provision the JAWS DB add-on.
-
-**IMPORTANT:** Payment info. must be provided in order to use the JawsDB MySQL
-add-on. You must provide a credit card to use the service. **With the exception that all of you must be using the student package**
-
-1. Create a Heroku app in the command line. `heroku create <optionally-provide an app name>`
-
-2. Provision the [JawsDB MySQL add-on](https://elements.heroku.com/addons/jawsdb) with the free pricing plan. `heroku addons:create jawsdb:kitefin`
-
-3. Add environmental variables to the heroku config. The boilerplate uses
-   `SECRET` to sign the session id cookie. Use a tool to generate a long
-   randomized string for this value. (e.g. `hsKVlvYcC5b#Fw1FS*qz`) Add `SECRET`
-   to config by running `heroku config:set SECRET=<your long random secret>`.
-
-4. Use the same command to add any other environmental variables required for
-   your app to function. (`heroku config:set <name>=<value>`)
-
-5. Deploy the app by running `git push heroku main`. (Use the command again to deploy updates.)
-
-6. Open your app in the browser with `heroku open`.
-
-### Seed JawsDB
-
-Running `heroku run npm run seed` will run the seed script in Heroku if your
-seeds are required for production.

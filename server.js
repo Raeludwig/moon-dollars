@@ -35,6 +35,20 @@ app.use('/api/favorites', favoritesRoutes);
 // connect routes
 app.use(router);
 
+// Routes
+const categoriesRoutes = require('./routes/categoriesRoutes');
+const drinksRoutes = require('./routes/drinksRoutes');
+const ingredientsRoutes = require('./routes/ingredientsRoutes');
+const usersRoutes = require('./routes/usersRoutes');
+const favoritesRoutes = require('./routes/favoritesRoutes');
+
+app.use('/api/categories', categoriesRoutes);
+app.use('/api/drinks', drinksRoutes);
+app.use('/api/ingredients', ingredientsRoutes);
+app.use('/api/users', usersRoutes);
+app.use('/api/favorites', favoritesRoutes);
+
+
 // connect db and listen
 sequelize
   .sync({ force: false })
