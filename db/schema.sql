@@ -1,2 +1,2 @@
--- drop database if exists DB_NAME;
-create database DB_NAME;
+drop database if exists MOONDOLLARS_DB;
+create database MOONDOLLARS_DB;
