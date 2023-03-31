@@ -11,7 +11,7 @@ const seedDatabase = async () => {
       individualHooks: true,
       returning: true,
     });
-    await Categories(sequelize).bulkCreate(categoriesData, {
+    await Categories.bulkCreate(categoriesData, {
       individualHooks: true,
       returning: true,
     });

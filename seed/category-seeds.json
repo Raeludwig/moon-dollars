@@ -1,19 +1,22 @@
 [
   {
     "id":1,
-    "CategorieName": "Shirts"
-    
+    "category_name": "Milk"
   },
   {
-    "CategorieName": "Shorts"
+    "id":2,
+    "category_name": "Drizzle"
   },
   {
-    "CategorieName": "Music"
+    "id":3,
+    "category_name": "Flavor Shots"
   },
   {
-    "CategorieName": "Hats"
+    "id":4,
+    "category_name": "Hats"
   },
   {
-    "CategorieName": "Shoes"
+    "id":5,
+    "category_name": "Shoes"
   }
 ]
