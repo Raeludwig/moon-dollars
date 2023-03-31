@@ -3,7 +3,6 @@ const sequelize = require('../config/connection.js');
 const { DataTypes } = require('sequelize');
 const Categories = require('./Categories');
 
-
 class Ingredients extends Model {}
 
 Ingredients.init(
