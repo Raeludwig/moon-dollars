@@ -1,0 +1,19 @@
+[
+  {
+    "id":1,
+    "CategorieName": "Shirts"
+    
+  },
+  {
+    "CategorieName": "Shorts"
+  },
+  {
+    "CategorieName": "Music"
+  },
+  {
+    "CategorieName": "Hats"
+  },
+  {
+    "CategorieName": "Shoes"
+  }
+]

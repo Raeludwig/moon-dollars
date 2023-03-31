@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Sequelize = require('sequelize');
 
 // create connection to the db. Connect to JWASDB instance if env var provided.
