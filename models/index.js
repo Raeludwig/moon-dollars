@@ -1,6 +1,6 @@
 const User = require('./User');
 const Categories = require('./Categories');
-const Drink = require('./Drink');
+const Drink = require('./Drinks');
 
 
 
