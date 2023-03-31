@@ -19,13 +19,12 @@ Ingredients.init(
       allowNull: true,
       field: "ingredientName",
     },
-    Categories_idCategories: {
+    Categories_category_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: "Categories_idCategories",
       references: {
         model: Categories,
-        key: "idCategories",
+        key: "category_id",
       },
     },
   },
