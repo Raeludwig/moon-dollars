@@ -1,0 +1,22 @@
+[
+  {
+    "id":1,
+    "category_name": "Milk"
+  },
+  {
+    "id":2,
+    "category_name": "Drizzle"
+  },
+  {
+    "id":3,
+    "category_name": "Flavor Shots"
+  },
+  {
+    "id":4,
+    "category_name": "Hats"
+  },
+  {
+    "id":5,
+    "category_name": "Shoes"
+  }
+]

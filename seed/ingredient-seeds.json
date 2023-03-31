@@ -1,0 +1,23 @@
+[
+    {
+    "ingredient_name": "Oat Milk",
+    "category_id": 1
+    },
+    {
+    "ingredient_name":"Caramel Syrup",
+    "category_id": 2
+    },
+    {
+    "ingredient_name": "Hazelnut Shot",
+    "category_id": 3
+    },
+    {
+    "ingredient_name": "Some other ingredient",
+    "category_id": 3
+    },
+    {
+    "ingredient_name": "",
+    "category_id": 2
+    }
+]
+
