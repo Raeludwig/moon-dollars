@@ -18,9 +18,6 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// connect routes
-app.use(router);
-
 // Routes
 const categoriesRoutes = require('./routes/categoriesRoutes');
 const drinksRoutes = require('./routes/drinksRoutes');
@@ -33,6 +30,11 @@ app.use('/api/drinks', drinksRoutes);
 app.use('/api/ingredients', ingredientsRoutes);
 app.use('/api/users', usersRoutes);
 app.use('/api/favorites', favoritesRoutes);
+
+
+// connect routes
+app.use(router);
+
 
 
 // connect db and listen
