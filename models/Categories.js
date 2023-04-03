@@ -1,30 +1,35 @@
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection.js');
 
-class Category extends Model {}
+class Categories extends Model {}
 
-
-Category.init(
-    {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
+Categories.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
     },
     category_name: {
-        type: DataTypes.STRING,
-        allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false
     }
-    },
-    {
-      sequelize,
-      timestamps: false,
-      freezeTableName: true,
-      underscored: true,
-      modelName: 'category',
-    }
-  );
-  
-  module.exports = Category;
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'Categories',
+    tableName: 'Categories', // update the table name to match the actual name in your database
+  }
+);
+
+const Ingredients = require('./Ingredients'); // import the Ingredients model class
+
+Categories.hasMany(Ingredients, { foreignKey: 'categoryId' });
+
+Ingredients.belongsTo(Categories, { foreignKey: 'categoryId' });
+
+module.exports = Categories;

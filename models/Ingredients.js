@@ -1,7 +1,5 @@
-const { Model } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
-const { DataTypes } = require('sequelize');
-const Categories = require('./Categories');
 
 class Ingredients extends Model {}
 
@@ -19,13 +17,14 @@ Ingredients.init(
       allowNull: true,
       field: "ingredientName",
     },
-    Categories_category_id: {
+    categoryId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: Categories,
-        key: "category_id",
+        model: "Categories",
+        key: "id",
       },
+      field: "category_id",
     },
   },
   {
@@ -33,9 +32,14 @@ Ingredients.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Ingredients",
-    tableName: "ingredient",
+    modelName: "Ingredient",
+    tableName: "Ingredients",
   }
 );
+
+const Categories = require('./Categories'); // import the Categories model class
+
+Ingredients.belongsTo(Categories, { foreignKey: 'categoryId' });
+Categories.hasMany(Ingredients, { foreignKey: 'categoryId' });
 
 module.exports = Ingredients;
