@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../models');
+const Categories = require('../models/Categories');
 
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
@@ -8,6 +9,22 @@ const { User } = require('../models');
 // router.get("/users-only", withAuth, (req, res) => {
 //   // ...
 // });
+
+router.get('/', async (req, res) => {
+  //Code goes here
+  try {
+    const categoriesData = await Categories.findAll({
+    
+    });
+    const categories = categoriesData.map((category) => category.get({ plain: true }));
+    console.log("categories error", categories);
+    res.render('customDrink', { categories });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+  
+});
 
 router.get('/', async (req, res) => {
   try {

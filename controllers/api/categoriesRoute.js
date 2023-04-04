@@ -6,7 +6,7 @@ router.get('/', withAuth, async (req, res) => {
 try {
     const categoriesData = await Categories.findAll();
     const categories = categoriesData.map((category) => category.get({ plain: true }));
-    res.render('categories', {
+    res.render('customDrink', {
         categories,
         logged_in: req.session.logged_in
     });

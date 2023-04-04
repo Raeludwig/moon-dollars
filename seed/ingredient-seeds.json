@@ -1,23 +1,75 @@
-[
+[   
     {
-    "ingredient_name": "Oat Milk",
+    "ingredient_name": "Hot Coffee",
     "category_id": 1
     },
     {
+    "ingredient_name": "Iced Coffee",
+    "category_id": 1
+    },
+    {
+    "ingredient_name": "Latte",
+    "category_id": 1
+    },
+    {
+    "ingredient_name": "Iced Latte",
+    "category_id": 1
+    },
+    {
+    "ingredient_name": "Hot Tea",
+    "category_id": 1
+    },
+    {
+    "ingredient_name": "Iced Tea",
+    "category_id": 1
+    },
+    {
+    "ingredient_name": "Whole Milk",
+    "category_id": 2
+    },
+    {
+    "ingredient_name": "Almond Milk",
+    "category_id": 2
+    },
+    {
+    "ingredient_name": "Oat Milk",
+    "category_id": 2
+    },
+    {
+    "ingredient_name": "Half & Half",
+    "category_id": 2
+    },
+    {
     "ingredient_name":"Caramel Syrup",
-    "category_id": 2
-    },
-    {
-    "ingredient_name": "Hazelnut Shot",
     "category_id": 3
     },
     {
-    "ingredient_name": "Some other ingredient",
+    "ingredient_name":"Vanilla Syrup",
     "category_id": 3
     },
     {
-    "ingredient_name": "",
-    "category_id": 2
+    "ingredient_name":"Chocolate Syrup",
+    "category_id": 3
+    },
+    {
+    "ingredient_name":"Hazelnut Syrup",
+    "category_id": 3
+    },
+    {
+    "ingredient_name": "Extra Espresso Shot",
+    "category_id": 4
+    },
+    {
+    "ingredient_name": "Cold Foam",
+    "category_id": 4
+    },
+    {
+    "ingredient_name": "Whipped Cream",
+    "category_id": 4
+    },
+    {
+    "ingredient_name": "Mocha Drizzle",
+    "category_id": 4
     }
 ]
 
