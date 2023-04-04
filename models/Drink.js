@@ -1,50 +1,46 @@
-const {
-  DataTypes
-} = require('sequelize');
-module.exports = sequelize => {
-  const attributes = {
+const { Model } = require('sequelize');
+const sequelize = require('../config/connection.js');
+const { DataTypes } = require('sequelize');
+// const Categories = require('./Categories');
+
+class Drink extends Model {}
+
+Drink.init(
+  {
     idDrinks: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
       primaryKey: true,
       autoIncrement: true,
-      comment: null,
-      field: "idDrinks"
+      field: 'idDrinks',
     },
     User_userid: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "User_userid",
-      references: {
-        key: "userid",
-        model: "user_model"
-      }
+      // references: {
+      //   model: 'user_model',  //not sure if this is needed
+      //   key: 'userid',
+      // },
+      field: 'User_userid',
     },
     Drink_name: {
       type: DataTypes.STRING(45),
       allowNull: false,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "Drink name"
-    }
-  };
-  const options = {
-    tableName: "drink",
-    comment: "",
-    indexes: [{
-      name: "fk_Drink order_User_idx",
-      unique: false,
-      type: "BTREE",
-      fields: ["User_userid"]
-    }]
-  };
-  const DrinkModel = sequelize.define("drink_model", attributes, options);
-  return DrinkModel;
-};
+      field: 'Drink_name',
+    },
+  },
+  {
+    sequelize,
+    tableName: 'drink',
+    // indexes: [
+    //   {
+    //     name: 'fk_Drink order_User_idx',
+    //     unique: false,
+    //     type: 'BTREE',
+    //     fields: ['User_userid'],
+    //   },
+    // ],
+  }
+);
+
+module.exports = Drink;
