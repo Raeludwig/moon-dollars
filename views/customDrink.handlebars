@@ -1,3 +1,11 @@
 <h1>Custom Drink Order</h1>
+{{#if isLoggedIn}}
+  <p>Start making your custom drink recipe, {{user.username}}!</p>
+{{/if}}
+<div>
+    <form action="../../public/js/customDrink" method="POST">
+        <h3>Coffee type</h3>
+    </form>
+</div>
 
 <script src='/js/customDrink.js'></script> 
