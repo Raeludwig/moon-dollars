@@ -3,9 +3,9 @@ const sequelize = require('../config/connection.js');
 const { DataTypes } = require('sequelize');
 // const Categories = require('./Categories');
 
-class Drinks extends Model {}
+class Drink extends Model {}
 
-Drinks.init(
+Drink.init(
   {
     idDrinks: {
       type: DataTypes.INTEGER,
@@ -17,10 +17,10 @@ Drinks.init(
     User_userid: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: 'user_model',
-        key: 'userid',
-      },
+      // references: {
+      //   model: 'user_model',  //not sure if this is needed
+      //   key: 'userid',
+      // },
       field: 'User_userid',
     },
     Drink_name: {
@@ -32,16 +32,15 @@ Drinks.init(
   {
     sequelize,
     tableName: 'drink',
-    comment: '',
-    indexes: [
-      {
-        name: 'fk_Drink order_User_idx',
-        unique: false,
-        type: 'BTREE',
-        fields: ['User_userid'],
-      },
-    ],
+    // indexes: [
+    //   {
+    //     name: 'fk_Drink order_User_idx',
+    //     unique: false,
+    //     type: 'BTREE',
+    //     fields: ['User_userid'],
+    //   },
+    // ],
   }
 );
 
-module.exports = Drinks;
+module.exports = Drink;

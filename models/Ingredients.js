@@ -23,10 +23,10 @@ Ingredients.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       field: "Categories_idCategories",
-      references: {
-        model: Categories,
-        key: "idCategories",
-      },
+      // references: {
+      //   model: Categories,
+      //   key: "idCategories",
+      // },
     },
   },
   {
