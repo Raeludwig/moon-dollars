@@ -1,11 +1,10 @@
-// Get the template and compile it
-var template = Handlebars.compile($('#questions-template').html());
+
 
 // Render the template and add it to the page
-$('body').append(template());
+
 
 // Add event listeners to the "Next" buttons
-$('.next-btn').on('click', function() {
+$('.nxt-btn').on('click', function() {
   // Hide the current question and show the next question
   var nextQuestion = $(this).data('next');
   $(this).closest('.question').hide();
@@ -14,12 +13,12 @@ $('.next-btn').on('click', function() {
 
 // Add event listener to the "Submit" button
 $('.submit-btn').on('click', function() {
-  // Collect the answers to the questions
-  var answer1 = $('#answer1').is(':checked');
-  var answer2 = $('#answer2').is(':checked');
-  var answer3 = $('#answer3').is(':checked');
-  var answer4 = $('#answer4').is(':checked');
+  // Collect the questions to the questions
+  var question1 = $('#question1').is(':checked');
+  var question2 = $('#question2').is(':checked');
+  var question3 = $('#question3').is(':checked');
+  var question4 = $('#question4').is(':checked');
 
   // Submit the form data to the server
-  submitForm(answer1, answer2, answer3, answer4);
+  submitForm(question1, question2, question3, question4);
 });
