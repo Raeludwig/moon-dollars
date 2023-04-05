@@ -1,18 +1,18 @@
 [
   {
     "id":1,
-    "category_name": "Drink Type"
+    "name": "Drink Type"
   },
   {
     "id":2,
-    "category_name": "Milk"
+    "name": "Milk"
   },
   {
     "id":3,
-    "category_name": "Flavored Syrup"
+    "name": "Flavored Syrup"
   },
   {
     "id":4,
-    "category_name": "Extra Add-ins"
+    "name": "Extra Add-ins"
   }
 ]

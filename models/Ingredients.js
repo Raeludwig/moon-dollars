@@ -11,7 +11,7 @@ Ingredients.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    ingredient_name: {
+    name: {
       type: DataTypes.STRING(30),
       allowNull: false,
     },
