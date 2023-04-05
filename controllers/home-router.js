@@ -40,6 +40,7 @@ router.get('/', async (req, res) => {
     }
     res.render('home', {
       title: 'Home Page',
+      style: 'home.css',
       isLoggedIn: req.session.isLoggedIn,
       user,
     });
@@ -50,15 +51,24 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  res.render('login', { title: 'Log-In Page' });
+  res.render('login', { 
+    title: 'Log-In Page',
+    style: 'login.css'
+  });
 });
 
 router.get('/signup', (req, res) => {
-  res.render('signup', { title: 'Sign-Up Page' });
+  res.render('signup', { 
+    title: 'Sign-Up Page',
+    style: 'signup.css'
+  });
 });
 
 router.get('/customDrink', (req, res) => {
-  res.render('customDrink', { title: 'Custom Drink Page'} );
+  res.render('customDrink', { 
+    title: 'Custom Drink Page',
+    style: 'customdrink.css'
+  } );
 });
 
 
