@@ -1,75 +1,79 @@
 [   
     {
-    "ingredient_name": "Hot Coffee",
+    "name": "Hot Coffee",
     "category_id": 1
     },
     {
-    "ingredient_name": "Iced Coffee",
+    "name": "Iced Coffee",
     "category_id": 1
     },
     {
-    "ingredient_name": "Latte",
+    "name": "Latte",
     "category_id": 1
     },
     {
-    "ingredient_name": "Iced Latte",
+    "name": "Iced Latte",
     "category_id": 1
     },
     {
-    "ingredient_name": "Hot Tea",
+    "name": "Hot Tea",
     "category_id": 1
     },
     {
-    "ingredient_name": "Iced Tea",
+    "name": "Iced Tea",
     "category_id": 1
     },
     {
-    "ingredient_name": "Whole Milk",
+    "name": "Whole Milk",
     "category_id": 2
     },
     {
-    "ingredient_name": "Almond Milk",
+    "name": "Almond Milk",
     "category_id": 2
     },
     {
-    "ingredient_name": "Oat Milk",
+    "name": "Oat Milk",
     "category_id": 2
     },
     {
-    "ingredient_name": "Half & Half",
+    "name": "Half & Half",
     "category_id": 2
     },
     {
-    "ingredient_name":"Caramel Syrup",
+    "name":"Caramel Syrup",
     "category_id": 3
     },
     {
-    "ingredient_name":"Vanilla Syrup",
+    "name":"Vanilla Syrup",
     "category_id": 3
     },
     {
-    "ingredient_name":"Chocolate Syrup",
+    "name":"Chocolate Syrup",
     "category_id": 3
     },
     {
-    "ingredient_name":"Hazelnut Syrup",
+    "name":"Hazelnut Syrup",
     "category_id": 3
     },
     {
-    "ingredient_name": "Extra Espresso Shot",
+    "name": "Extra Espresso Shot",
     "category_id": 4
     },
     {
-    "ingredient_name": "Cold Foam",
+    "name": "Cold Foam",
     "category_id": 4
     },
     {
-    "ingredient_name": "Whipped Cream",
+    "name": "Whipped Cream",
     "category_id": 4
     },
     {
-    "ingredient_name": "Mocha Drizzle",
+    "name": "Mocha Drizzle",
     "category_id": 4
+    },
+    {
+    "name": "None",
+    "category_id": 2
     }
 ]
 

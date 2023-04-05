@@ -14,7 +14,7 @@ button {
   background: rgba(255, 255, 255, 0.15);
 }
 
-.login .container {
+.signup-form .container {
   position: relative;
   width: 90%;
   max-width: 420px;
@@ -23,25 +23,25 @@ button {
   flex-direction: column;
   align-items: center;
 }
-.login .title {
+.signup-form .title {
   font-size: 1.8rem;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
 }
-.login .social-login {
+.signup-form .social-login {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.login .separator {
+.signup-form .separator {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size:70px;
 }
-.login .separator span {
+.signup-form .separator span {
   display: block;
   width: 100%;
   height: 1px;

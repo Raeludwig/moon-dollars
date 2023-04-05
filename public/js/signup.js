@@ -25,6 +25,7 @@ const handleSignupSubmit = async (event) => {
         'Content-Type': 'application/json; charset=UTF-8',
       },
     });
+    
 
     if (!response.ok) {
       alert('Failed to sign up.');

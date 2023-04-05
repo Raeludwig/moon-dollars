@@ -1,1 +1,74 @@
+<head>
+    <link rel="stylesheet"  href="/css/customdrink.css">
+    <link rel="stylesheet"  href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
 <h1>Custom Drink Order</h1>
+<p>Choose from a list of ingredient options to create your own coffee drink recipes!</p>
+<div class="wrapper question1">
+    <h2>{{categories.[0].name}}</h2>
+    <div class="custom-card">
+      <img class="Coffee" src="/public/images/milkbox.png" alt="coffee"></img>
+      <form action="#">
+        <div class="checkboxes">
+          <!-- Checkboxes here -->
+          <label><input type="checkbox" name="option1" value="Option 1">{{ingredients.[0].name}}</label><br>
+          <label><input type="checkbox" name="option2" value="Option 2">{{ingredients.[1].name}}</label><br>
+          <label><input type="checkbox" name="option3" value="Option 3">{{ingredients.[2].name}}</label><br>
+          <label><input type="checkbox" name="option4" value="Option 4">{{ingredients.[3].name}}</label><br>
+          <label><input type="checkbox" name="option5" value="Option 5">{{ingredients.[4].name}}</label><br>
+          <label><input type="checkbox" name="option6" value="Option 6">{{ingredients.[5].name}}</label><br>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="wrapper question2">
+    <h2>{{categories.[1].name}}</h2>
+    <div class="custom-card">
+      <img class="Milk" src="/public/images/milkbox.png" alt="Milk box"></img>
+      <form action="#">
+        <div class="checkboxes">
+          <!-- Checkboxes here -->
+          <label><input type="checkbox" name="option1" value="Option 1"> {{ingredients.[6].name}}</label><br>
+          <label><input type="checkbox" name="option2" value="Option 2"> {{ingredients.[7].name}}</label><br>
+          <label><input type="checkbox" name="option3" value="Option 3"> {{ingredients.[8].name}}</label><br>
+          <label><input type="checkbox" name="option4" value="Option 4"> {{ingredients.[9].name}}</label><br>  <!-- id 10 is half & half -->
+          <label><input type="checkbox" name="option5" value="Option 5"> {{ingredients.[17].name}}</label><br>  <!-- id 19 is none -->
+        </div>
+      </form>
+    </div>
+</div>
+<div class="wrapper question3">
+    <h2>{{categories.[2].name}}</h2>
+    <div class="custom-card">
+      <img class="Flavors" src="" alt="Flavor pumps"></img>
+      <form action="#">
+        <div class="checkboxes">
+          <!-- Checkboxes here -->
+          <label><input type="checkbox" name="option1" value="Option 1"> {{ingredients.[10].name}}</label><br>  <!-- id 9 is caramel syrup -->
+          <label><input type="checkbox" name="option2" value="Option 2"> {{ingredients.[11].name}}</label><br>
+          <label><input type="checkbox" name="option3" value="Option 3"> {{ingredients.[12].name}}</label><br>
+          <label><input type="checkbox" name="option4" value="Option 4"> {{ingredients.[13].name}}</label><br>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="wrapper question4">
+    <h2>{{categories.[3].name}}</h2>
+    <div class="custom-card">
+      <img class="Type" src="" alt="Image of a latte"></img>
+      <form action="#">
+        <div class="checkboxes">
+          <!-- Checkboxes here -->
+          <label><input type="checkbox" name="option1" value="Option 1"> {{ingredients.[14].name}}</label><br>
+          <label><input type="checkbox" name="option2" value="Option 2"> {{ingredients.[15].name}}</label><br>
+          <label><input type="checkbox" name="option3" value="Option 3"> {{ingredients.[17].name}}</label><br>
+          <label><input type="checkbox" name="option4" value="Option 4"> {{ingredients.[18].name}}</label><br>
+          <label><input type="checkbox" name="option5" value="Option 5"> {{ingredients.[16].name}}</label><br>
+          <button class="submit-btn" type="submit">Save your drink!</button>
+        </div>
+      </form>
+    </div>
+</div>
+<script src='/js/customDrink.js'></script> 
