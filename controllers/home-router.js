@@ -20,9 +20,9 @@ router.get('/', async (req, res) => {
     const categories = categoriesData.map((category) => category.get({ plain: true }));
     const ingredients = ingredientsData.map((ingredient) => ingredient.get({ plain: true }));
 
-    console.log("categories error", categories);
-    res.render('customDrink', { categories });
-    res.render('customDrink', { ingredients });
+    console.log("categories error", { categories, ingredients});
+    res.render('customDrink', { categories, ingredients });
+
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
