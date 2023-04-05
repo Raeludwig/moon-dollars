@@ -11,7 +11,7 @@ const Ingredients = require('../models/Ingredients');
 //   // ...
 // });
 
-router.get('/customeDrink', async (req, res) => {
+router.get('/customDrink', async (req, res) => {
   //Code goes here
   try {
     const categoriesData = await Categories.findAll();
