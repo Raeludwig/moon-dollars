@@ -25,6 +25,7 @@ const handleSignupSubmit = async (event) => {
         'Content-Type': 'application/json; charset=UTF-8',
       },
     });
+    
 
     if (!response.ok) {
       alert('Failed to sign up.');
@@ -32,7 +33,7 @@ const handleSignupSubmit = async (event) => {
     }
 
     // go to home page
-    window.location.replace('/home');
+    window.location.replace('/');
   } catch (error) {
     console.log(error);
   }
