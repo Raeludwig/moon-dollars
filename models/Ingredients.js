@@ -1,28 +1,32 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model } = require('sequelize');
 const sequelize = require('../config/connection.js');
+const { DataTypes } = require('sequelize');
+const Categories = require('./Categories');
 
 class Ingredients extends Model {}
 
 Ingredients.init(
   {
-    id: {
+    idingredient: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      field: "idingredient",
     },
-    ingredient_name: {
-      type: DataTypes.STRING(30),
-      allowNull: false,
+    ingredientName: {
+      type: DataTypes.STRING(45),
+      allowNull: true,
+      field: "ingredientName",
     },
-    category_id: {
+    Categories_idCategories: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: 'category',
-        key: 'id',
-        unique: false,
-      },
+      field: "Categories_idCategories",
+      // references: {
+      //   model: Categories,
+      //   key: "idCategories",
+      // },
     },
   },
   {
@@ -30,7 +34,8 @@ Ingredients.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "ingredients",
+    modelName: "Ingredients",
+    tableName: "ingredient",
   }
 );
 

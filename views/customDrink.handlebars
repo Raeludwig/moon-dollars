@@ -1,1 +1,65 @@
 <h1>Custom Drink Order</h1>
+<p>Choose from a list of ingredient options to create your own coffee drink recipes!</p>
+<div class="wrapper question1">
+    <h2>Type of coffee</h2>
+    <div class="custom-card">
+      <img class="Coffee" src="" alt="coffee"></img>
+      <form action="#">
+        <div class="checkboxes">
+          <!-- Checkboxes here -->
+          <label><input type="checkbox" name="option1" value="Option 1">Espresso</label><br>
+          <label><input type="checkbox" name="option2" value="Option 2">Drip</label><br>
+          <label><input type="checkbox" name="option3" value="Option 3">Americano</label><br>
+          <label><input type="checkbox" name="option4" value="Option 4">Decaf</label><br>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="wrapper question2">
+    <h2>Milk</h2>
+    <div class="custom-card">
+      {{!-- <img class="Milk" src="/public/images/milkbox.png" alt="Milk box"></img> --}}
+      <form action="#">
+        <div class="checkboxes">
+          <!-- Checkboxes here -->
+          <label><input type="checkbox" name="option1" value="Option 1"> Whole Milk</label><br>
+          <label><input type="checkbox" name="option2" value="Option 2"> Oat Milk</label><br>
+          <label><input type="checkbox" name="option3" value="Option 3"> Almond Milk</label><br>
+          <label><input type="checkbox" name="option4" value="Option 4"> Half and Half</label><br>
+          <label><input type="checkbox" name="option5" value="Option 5">None</label><br>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="wrapper question3">
+    <h2>Flavor</h2>
+    <div class="custom-card">
+      <img class="Flavors" src="" alt="Flavor pumps"></img>
+      <form action="#">
+        <div class="checkboxes">
+          <!-- Checkboxes here -->
+          <label><input type="checkbox" name="option1" value="Option 1">Vanilla</label><br>
+          <label><input type="checkbox" name="option2" value="Option 2">Salted Caramel</label><br>
+          <label><input type="checkbox" name="option3" value="Option 3">Lavender</label><br>
+          <label><input type="checkbox" name="option4" value="Option 4">None</label><br>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="wrapper question4">
+    <h2>Drink Type</h2>
+    <div class="custom-card">
+      <img class="Type" src="" alt="Image of a latte"></img>
+      <form action="#">
+        <div class="checkboxes">
+          <!-- Checkboxes here -->
+          <label><input type="checkbox" name="option1" value="Option 1">Latte</label><br>
+          <label><input type="checkbox" name="option2" value="Option 2">Cappucino</label><br>
+          <label><input type="checkbox" name="option3" value="Option 3">Macchiato</label><br>
+          <label><input type="checkbox" name="option4" value="Option 4">Black</label><br>
+          <button class="submit-btn" type="submit">Save your drink!</button>
+        </div>
+      </form>
+    </div>
+</div>
+<script src='/js/customDrink.js'></script> 

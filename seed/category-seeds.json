@@ -1,18 +1,22 @@
 [
   {
     "id":1,
-    "category_name": "Drink Type"
-  },
-  {
-    "id":2,
     "category_name": "Milk"
   },
   {
+    "id":2,
+    "category_name": "Drizzle"
+  },
+  {
     "id":3,
-    "category_name": "Flavored Syrup"
+    "category_name": "Flavor Shots"
   },
   {
     "id":4,
-    "category_name": "Extra Add-ins"
+    "category_name": "Hats"
+  },
+  {
+    "id":5,
+    "category_name": "Shoes"
   }
 ]
