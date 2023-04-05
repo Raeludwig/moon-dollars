@@ -89,7 +89,7 @@ button[type=submit]:hover {
   letter-spacing: 0.5px;
   margin: 0.2rem 0;
 }
-.additional-act span {
+.additional-act a {
   color: #ecbb08;
   cursor: pointer;
 }
