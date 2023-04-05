@@ -1,0 +1,95 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap");
+
+
+
+input,
+button {
+  display: inline-block;
+  width: 100%;
+  height: 3.23rem;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.login .container {
+  position: relative;
+  width: 90%;
+  max-width: 420px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login .title {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+.login .social-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login .separator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:70px;
+}
+.login .separator span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+  margin: 1.5rem;
+}
+
+form {
+  width: 100%;
+}
+form .form-group {
+  margin-bottom: 1.5rem;
+}
+form .form-group label {
+  display: block;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  color: dark-blue;
+}
+form .form-group input {
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  padding: 0 1.5rem;
+}
+
+button[type=submit] {
+  background: #f1b83d;
+  color: #023262;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: all 0.3s linear;
+}
+button[type=submit]:hover {
+  background: #ffc800;
+  opacity: 0.8;
+}
+
+.additional-act {
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin: 0.2rem 0;
+}
+.additional-act span {
+  color: #ecbb08;
+  cursor: pointer;
+}
