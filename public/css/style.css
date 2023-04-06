@@ -13,6 +13,55 @@
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
-  
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #222;
+}
+
+nav ul{
+  list-style-type: none;
+  text-align: center;
+  display: block ruby;
+}
+
+nav ul li{
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  height: 2%;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+
+/* an underline appears at the bottom on hover of each link */
+nav ul li a:hover, nav ul li a:active{
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 8px;
+}
+
+header{
+  width: 100%;
+  /* justify-content: flex-end; */
+}
+
+body{
+  width: 100%;
+  height: 100%;
+}
+
+h1{
+  color: rgb(224, 159, 37);
+}

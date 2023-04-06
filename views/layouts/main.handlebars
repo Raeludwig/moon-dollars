@@ -7,17 +7,23 @@
     <link rel='stylesheet' href='/css/{{style}}' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
-  <body>
+  <header>
     <nav>
-      <a href='/'>Home</a>
+      {{!-- <header><h1>Moon Dollars</h1></header> --}}
+      <ul>
+        <li><a href='/'>Home</a></li>
       {{#if isLoggedIn}}
-        <a href="/customDrink">Custom Drink</a>
-        <button class='btn btn-logout'id='logoutbtn'>Log Out</button>
+        <li><a href="/customDrink">Custom Drink</a></li>
+        {{!-- <li><button class='btn btn-logout'id='logoutbtn'>Log Out</button></li> --}}
+        <li><a id="logoutbtn">Log Out</a></li>
       {{else}}
-        <a href='/login'>login</a>
-        <a href='/signup'>signup</a>
+        <li><a href='/login'>Log In</a></li>
+        <li><a href='/signup'>Sign Up</a></li>
       {{/if}}
+      </ul>
     </nav>
+  </header>
+  <body>
     {{{body}}}
     <script src='/js/main.js'></script>
   </body>

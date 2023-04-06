@@ -14,6 +14,11 @@ button {
   background: rgba(255, 255, 255, 0.15);
 }
 
+.signup-form{
+  display: flex;
+  justify-content: center;
+}
+
 .signup-form .container {
   position: relative;
   width: 90%;
@@ -22,6 +27,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 150px;
 }
 .signup-form .title {
   font-size: 1.8rem;
