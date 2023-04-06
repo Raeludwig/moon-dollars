@@ -16,7 +16,7 @@ button {
 .login-form{
   display: flex;
   justify-content: center;
-  
+  color: #ddd;
 }
 .login-form .container {
   position: relative;

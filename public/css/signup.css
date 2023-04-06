@@ -17,6 +17,7 @@ button {
 .signup-form{
   display: flex;
   justify-content: center;
+  color: #ddd;
 }
 
 .signup-form .container {
