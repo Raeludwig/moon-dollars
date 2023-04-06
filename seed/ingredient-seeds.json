@@ -1,77 +1,96 @@
 [   
     {
+    "id": 1,
     "name": "Hot Coffee",
     "category_id": 1
     },
     {
+    "id": 2,
     "name": "Iced Coffee",
     "category_id": 1
     },
     {
+    "id": 3,
     "name": "Latte",
     "category_id": 1
     },
     {
+    "id": 4,
     "name": "Iced Latte",
     "category_id": 1
     },
     {
+    "id": 5,
     "name": "Hot Tea",
     "category_id": 1
     },
     {
+    "id": 6,
     "name": "Iced Tea",
     "category_id": 1
     },
     {
+    "id": 7,
     "name": "Whole Milk",
     "category_id": 2
     },
     {
+    "id": 8,
     "name": "Almond Milk",
     "category_id": 2
     },
     {
+    "id": 9,
     "name": "Oat Milk",
     "category_id": 2
     },
     {
+    "id": 10,
     "name": "Half & Half",
     "category_id": 2
     },
     {
+    "id": 11,
     "name":"Caramel Syrup",
     "category_id": 3
     },
     {
+    "id": 12,
     "name":"Vanilla Syrup",
     "category_id": 3
     },
     {
+    "id": 13,
     "name":"Chocolate Syrup",
     "category_id": 3
     },
     {
+    "id": 14,
     "name":"Hazelnut Syrup",
     "category_id": 3
     },
     {
+    "id": 15,
     "name": "Extra Espresso Shot",
     "category_id": 4
     },
     {
+    "id": 16,
     "name": "Cold Foam",
     "category_id": 4
     },
     {
+    "id": 17,
     "name": "Whipped Cream",
     "category_id": 4
     },
     {
+    "id": 18,
     "name": "Mocha Drizzle",
     "category_id": 4
     },
     {
+    "id": 19,
     "name": "None",
     "category_id": 2
     }
