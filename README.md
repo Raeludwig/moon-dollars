@@ -1,3 +1,5 @@
+![coffee logo](https://user-images.githubusercontent.com/118871515/230507708-86a03f0c-7a22-45bb-aa21-6dedcfd868e6.png)
+
 <h1 align="center">
   <br>
 Moon Dollars
