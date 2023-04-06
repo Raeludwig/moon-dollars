@@ -1,46 +1,44 @@
-const { Model } = require('sequelize');
-const sequelize = require('../config/connection.js');
-const { DataTypes } = require('sequelize');
-// const Categories = require('./Categories');
+const { Model } = require("sequelize");
+const sequelize = require("../config/connection.js");
+const { DataTypes } = require("sequelize");
 
-class Drink extends Model {}
+class Drinks extends Model {}
 
-Drink.init(
+Drinks.init(
   {
-    idDrinks: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-      field: 'idDrinks',
+      field: "id",
     },
-    User_userid: {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      // field: "drink_name",
+    },
+    user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      // references: {
-      //   model: 'user_model',  //not sure if this is needed
-      //   key: 'userid',
-      // },
-      field: 'User_userid',
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     },
-    Drink_name: {
-      type: DataTypes.STRING(45),
-      allowNull: false,
-      field: 'Drink_name',
+    ingredients: {
+      type: DataTypes.STRING,
+      get() {
+        return this.getDataValue("ingredients").split(";");
+      },
+      set(val) {
+        this.setDataValue("ingredients", val.join(";"));
+      },
     },
   },
   {
     sequelize,
-    tableName: 'drink',
-    // indexes: [
-    //   {
-    //     name: 'fk_Drink order_User_idx',
-    //     unique: false,
-    //     type: 'BTREE',
-    //     fields: ['User_userid'],
-    //   },
-    // ],
+    tableName: "drink",
   }
 );
 
-module.exports = Drink;
+module.exports = Drinks;
