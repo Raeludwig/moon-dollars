@@ -1,19 +1,14 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
+<link rel="stylesheet"  href="/css/favorite.css">
 
-<div class="row mt-4">
- 
-
+<div class="row mt-4" id="container">
   <div class="col-md-6 blogpost-list">
-    <h3>Favorite Drinks:</h3>
+    <h1>Favorite Drinks</h1>
 
     {{#each drinks as |drink|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
+    <div class="row mb-2" id="drink-block">
+      <div class="col-md-8" id="custom-card">
         <h4>{{drink.name}}</h4>
+        <p>Ingredients:</p>
         <ul>
         {{#each drink.ingredients as |ingredient|}}
           <li>{{ingredient}}</li>
