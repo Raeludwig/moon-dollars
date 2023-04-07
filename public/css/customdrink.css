@@ -50,12 +50,28 @@ label {
     display: block;
     margin: 0 auto;
     text-align: center;
-    color: #8b2121;
+    color: #023262;
+    width: 20%;
+    height: 3.23rem;
+    border: none;
+    outline: none;
+    border-radius: 100px;
   }
   
   .submit-btn {
     display: block;
     margin: 0 auto;
     color: #8b2121;
+    width: 20%;
+    height: 3.23rem;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    background: #f1b83d;
+    color: #023262;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
   }
   
