@@ -9,15 +9,9 @@
       {{!-- <header><h1>Moon Dollars</h1></header> --}}
       <ul>
         <li><a href='/'>Home</a></li>
-      {{#if isLoggedIn}}
-        <li><a href="/customDrink">Custom Drink</a></li>
         {{!-- <li><button class='btn btn-logout'id='logoutbtn'>Log Out</button></li> --}}
         <li><a href='/favoriteDrink'>Favorite Drinks</a></li>
         <li><a id="logoutbtn">Log Out</a></li>
-      {{else}}
-        <li><a href='/login'>Log In</a></li>
-        <li><a href='/signup'>Sign Up</a></li>
-      {{/if}}
       </ul>
     </nav>
   </header>
