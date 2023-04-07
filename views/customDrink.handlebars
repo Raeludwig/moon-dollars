@@ -9,9 +9,15 @@
       {{!-- <header><h1>Moon Dollars</h1></header> --}}
       <ul>
         <li><a href='/'>Home</a></li>
+      {{#if isLoggedIn}}
+        <li><a href="/customDrink">Custom Drink</a></li>
         {{!-- <li><button class='btn btn-logout'id='logoutbtn'>Log Out</button></li> --}}
         <li><a href='/favoriteDrink'>Favorite Drinks</a></li>
         <li><a id="logoutbtn">Log Out</a></li>
+      {{else}}
+        <li><a href='/login'>Log In</a></li>
+        <li><a href='/signup'>Sign Up</a></li>
+      {{/if}}
       </ul>
     </nav>
   </header>
@@ -55,6 +61,7 @@
         <h2>{{categories.[2].name}}</h2>
         <div class="custom-card">
             <img class="Flavors" src="/images/syrup-bottle.png" alt="Flavor pumps"></img>
+
             <div class="checkboxes">
                 <!-- Checkboxes here -->
                 <label><input type="checkbox" name="option1" value="{{ingredients.[10].name}}"> {{ingredients.[10].name}}</label><br>  <!-- id 9 is caramel syrup -->
@@ -85,7 +92,7 @@
         </div>
     </div>
 <br>
-<input id= "drink-name" type="text" placeholder="Enter drink name"></input>
+<input id= "drink-name" type="text" placeholder="Enter Drink Name"></input>
 <button class="submit-btn" type="submit">Save your drink!</button>
 </form>
 <script src='/js/customDrink.js'></script> 
