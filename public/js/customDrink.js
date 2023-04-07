@@ -24,7 +24,7 @@ const ingredients = [];
       });
   
       if (response.ok) {
-        document.location.replace('/favorites');
+        document.location.replace('/favoriteDrink');
       } else {
         alert('Failed to create drink');
       }

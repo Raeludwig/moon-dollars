@@ -2,14 +2,11 @@ const router = require('express').Router();
 const { User } = require('../models');
 const Categories = require('../models/Categories');
 const Ingredients = require('../models/Ingredients');
-
+const Drink = require('../models/Drink');
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
 
-// example of a protected route
-// router.get("/users-only", withAuth, (req, res) => {
-//   // ...
-// });
+
 
 router.get('/customDrink', async (req, res) => {
   //Code goes here
@@ -27,6 +24,33 @@ router.get('/customDrink', async (req, res) => {
     console.error(err.message);
     res.status(500).send('Server Error');
   } 
+});
+
+router.get('/favoriteDrink', async (req, res) => {
+  try {
+    // Get all drink and JOIN with user data
+    const userData = await User.findOne({
+      where: {
+        id: req.session.userId,
+      },
+      include: [
+        {
+          model: Drink,
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const drinks = userData.Drinks.map((drinks) => drinks.get({ plain: true }));
+console.log("drinks", drinks)
+    // Pass serialized data and session flag into template
+    res.render('favoriteDrink', {
+      drinks,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/', async (req, res) => {
@@ -64,12 +88,18 @@ router.get('/signup', (req, res) => {
   });
 });
 
-router.get('/customDrink', (req, res) => {
-  res.render('customDrink', { 
-    title: 'Custom Drink Page',
-    style: 'customdrink.css'
-  } );
-});
+// router.get('/customDrink', (req, res) => {
+//   res.render('customDrink', { 
+//     title: 'Custom Drink Page',
+//     style: 'customdrink.css'
+//   } );
+// });
 
+// router.get("/favoriteDrink", (req, res) => {
+//   res.render("favoriteDrink", {
+//     title: "Favorite Drink Page",
+//     style: "favoritedrink.css",
+//   });
+// });
 
 module.exports = router;
