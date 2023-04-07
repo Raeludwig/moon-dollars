@@ -4,6 +4,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
+ <header>
+    <nav>
+      {{!-- <header><h1>Moon Dollars</h1></header> --}}
+      <ul>
+        <li><a href='/'>Home</a></li>
+      {{#if isLoggedIn}}
+        <li><a href="/customDrink">Custom Drink</a></li>
+        {{!-- <li><button class='btn btn-logout'id='logoutbtn'>Log Out</button></li> --}}
+        <li><a href='/favoriteDrink'>Favorite Drinks</a></li>
+        <li><a id="logoutbtn">Log Out</a></li>
+      {{else}}
+        <li><a href='/login'>Log In</a></li>
+        <li><a href='/signup'>Sign Up</a></li>
+      {{/if}}
+      </ul>
+    </nav>
+  </header>
+  
 <h1>Custom Drink Order</h1>
 <p>Choose from a list of ingredient options to create your own coffee drink recipes!</p>
 <form id="drink-form">

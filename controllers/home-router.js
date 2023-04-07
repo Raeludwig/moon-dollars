@@ -30,6 +30,7 @@ router.get('/favoriteDrink', async (req, res) => {
   try {
     // Get all drink and JOIN with user data
     const userData = await User.findOne({
+      
       where: {
         id: req.session.userId,
       },
